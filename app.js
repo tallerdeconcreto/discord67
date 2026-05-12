@@ -1,5 +1,4 @@
 const BACKEND_URL = "https://discord67.vercel.app/api/submit";
-
 const form = document.getElementById("report-form");
 const statusEl = document.getElementById("status");
 
