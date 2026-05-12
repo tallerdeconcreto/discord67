@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Denuncias</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Spectral:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">Denuncias</p>
+        <h1>Registro de infracao</h1>
+        <p class="subtitle">
+          Informe o nome do usuario e descreva as atitudes que infringiram as
+          regras.
+        </p>
+      </header>
+
+      <section class="card">
+        <form id="report-form">
+          <label class="field">
+            <span>Nome do usuario que infringiu regra</span>
+            <input
+              type="text"
+              name="name"
+              required
+              placeholder="Ex: usuario#1234"
+            />
+          </label>
+
+          <label class="field">
+            <span>Descreva as atitudes do usuario</span>
+            <textarea
+              name="message"
+              rows="6"
+              required
+              placeholder="Explique o que aconteceu, quando e onde"
+            ></textarea>
+          </label>
+
+          <button type="submit" class="primary">Enviar denuncia</button>
+          <p class="status" id="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+    </main>
+  </body>
+</html>
