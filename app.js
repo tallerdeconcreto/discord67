@@ -1,4 +1,5 @@
 const BACKEND_URL = "https://discord67.vercel.app/api/submit";
+
 const form = document.getElementById("report-form");
 const statusEl = document.getElementById("status");
 
@@ -13,7 +14,6 @@ form.addEventListener("submit", async (event) => {
   const formData = new FormData(form);
   const payload = {
     name: formData.get("name").toString().trim(),
-    email: formData.get("email").toString().trim(),
     message: formData.get("message").toString().trim(),
   };
 
@@ -29,7 +29,7 @@ form.addEventListener("submit", async (event) => {
 
     if (!response.ok) {
       const error = await response.json().catch(() => ({}));
-      throw new Error(error.message || "Falha ao enviar o PDF.");
+      throw new Error(error.message || "Falha ao enviar para o Discord.");
     }
 
     setStatus("Enviado com sucesso.");
